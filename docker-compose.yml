@@ -1,0 +1,18 @@
+services:
+  fastmsr:
+    build: .
+    ports:
+      - "5008:5008"
+    environment:
+      FASTMSR_DB: /data/fastmsr.sqlite
+      FASTMSR_PORT: "5008"
+      # Provide via a .env file in this directory (compose auto-loads it) or
+      # uncomment and set here. The app runs fully offline — no external APIs.
+      FASTMSR_ADMIN_EMAIL: ${FASTMSR_ADMIN_EMAIL:-admin@fastmsr.example}
+      FASTMSR_ADMIN_PASSWORD: ${FASTMSR_ADMIN_PASSWORD:-FastMSR2026$$}
+      FASTMSR_SECRET: ${FASTMSR_SECRET:-}
+    volumes:
+      - fastmsr-data:/data
+
+volumes:
+  fastmsr-data:

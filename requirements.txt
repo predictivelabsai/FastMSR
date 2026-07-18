@@ -1,0 +1,6 @@
+python-fasthtml>=0.12.0
+uvicorn>=0.30.0
+python-dotenv>=1.0
+# --- demo GIF walkthrough only (optional) ---
+# playwright>=1.44
+# pillow>=10.0

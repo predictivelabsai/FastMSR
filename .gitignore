@@ -1,0 +1,22 @@
+# Secrets & local config
+.env
+
+# Database (rebuild with: python seed.py)
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Playwright / walkthrough scratch (the built GIF under static/ IS committed)
+.playwright-mcp/
+screenshots/frames/
+/tmp/
+
+# OS
+.DS_Store
