@@ -1,3 +1,4 @@
+from web.landing import landing_page
 """FastMSR — an open-source Mortgage Servicing Rights management system.
 
 A server-side, HTMX-driven FastHTML app: loan-tape portfolios, a real (simple)
@@ -132,7 +133,10 @@ def get():
 
 @rt("/")
 def get(session):
+    if not _user(session):
+        return landing_page()
     return _guard_page(session, "dashboard", views.dashboard)
+
 
 
 @rt("/alerts")
