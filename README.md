@@ -160,3 +160,7 @@ demo data. A production MSR platform would typically add:
 
 MIT © 2026 Predictive Labs Ltd. Built as an open-source reference for the
 Predictive Labs *Fast\** family of FastHTML applications.
+
+## Public landing
+
+`web/landing.py` provides a FastHTML marketing landing (including Pricing: BYOC free / Host with us €1/month). Wire `landing_page` to the public `/` route once the app shell exists.
